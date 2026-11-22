@@ -1,0 +1,112 @@
+/* LiveClip AI V2: visual adapted from the user's original liveclip.css.
+ * Designed for the PeakCut single-page interface, not for its older FastAPI/Jinja routes.
+ * Styling only: DOES NOT intercept or change PeakCut actions/API calls.
+ */
+:root {
+  --brand: #9564f0 !important;
+  --brand-press: #a67cff !important;
+  --brand-ink: #f0eaff !important;
+  --brand-soft: #291d45 !important;
+  --brand-line: #674d96 !important;
+  --brand-deep: #c1a2ff !important;
+  --frame: #0e101b !important;
+  --frame-2: #191b2b !important;
+  --frame-line: rgba(175,151,226,.16) !important;
+  --frame-text: #e9e7f5 !important;
+  --frame-dim: #9094b0 !important;
+  --bg: #0d1019 !important;
+  --muted: #1b2130 !important;
+  --line: #2b3043 !important;
+  --line-2: #363d52 !important;
+  --text: #e9edf9 !important;
+  --dim: #a2abc2 !important;
+  --faint: #858fa8 !important;
+  --good: #4fe5a0 !important;
+  --good-soft: #16352c !important;
+  --bad: #ff7c99 !important;
+  --bad-soft: #3b202d !important;
+  --live: #ff657e !important;
+  color-scheme: dark !important;
+}
+html, body { color-scheme: dark; }
+body { background: #0a0c16 !important; color:var(--text); font-family:'Segoe UI',Inter,system-ui,-apple-system,sans-serif !important; }
+.app { grid-template-columns: 257px minmax(0,1fr); background: #0b0e16; }
+.side { background: linear-gradient(180deg,#12121f 0%,#0d0f19 62%,#0a0c15 100%) !important; border-right:1px solid #252637; padding: 19px 13px 18px; }
+.side-head { min-height:69px; padding:6px 5px 18px !important; }
+.lc-brand { display:flex;align-items:center;gap:12px;min-width:0; }
+.lc-brand-symbol { display:grid;place-items:center;flex:none;width:41px;height:41px;border-radius:13px;background:linear-gradient(145deg,#8b5bf6,#5365d9);color:#fff;box-shadow:0 9px 24px #925bfa38; }
+.lc-brand-symbol svg { width:26px;height:26px;stroke:#fff;stroke-width:1.7;fill:none; }
+.lc-brand-copy {display:flex;flex-direction:column;min-width:0;}
+.lc-brand-copy strong {color:#eae6fb;font-size:18px;letter-spacing:-.6px;white-space:nowrap;line-height:1.2;}
+.lc-brand-copy strong em {color:#b590ff;font-style:normal}
+.lc-brand-copy small {color:#88819f;font-size:9px;letter-spacing:1.5px;font-weight:750;padding-top:4px;white-space:nowrap}
+.side .nav{gap:5px}
+.side .nav h4 {font-size:10px;font-weight:800;letter-spacing:1.5px;color:#68738e;text-transform:uppercase;padding:22px 14px 7px}
+.side .nav-item {min-height:44px;padding:0 14px;border-radius:10px;color:#a4a8c2;font-size:13px;font-weight:610;transition:background .16s,color .16s;}
+.side .nav-item:hover {background:#25263b;color:#f3efff}
+.side .nav-item.on {background:linear-gradient(90deg,#30234d,#262039)!important;color:#eadbff!important;box-shadow:inset 3px 0 #ab79ff;}
+.side .nav-item.on svg {color:#ad82ff!important}
+.side .nav-item svg {color:#7983a5}
+.side .nav-item.on .count {background:#583f83;color:#eadbff}
+.side-foot {border-top:1px solid #272b3c;margin-top:13px;padding-top:14px}
+.side-card,.ai-card,.me,.side .me-btn {background:#181b2a!important;border-color:#303448!important;color:#abb4ce!important;border-radius:12px!important;}
+.lc-license {padding:10px 10px 0;font-size:10px;color:#717b94;line-height:1.5}
+.lc-license a {color:#ac91e9;text-decoration:none}
+.lc-license a:hover{text-decoration:underline}
+main#main {background:radial-gradient(ellipse 60% 40% at 75% -15%,#30214a4a,transparent 75%),#0b0e16 !important; margin:0!important;border-radius:0!important;height:100vh!important;}
+.topbar {min-height:78px!important;padding:12px 40px!important;background:#0d1019ee!important;border-bottom:1px solid #22283a!important;backdrop-filter:blur(18px)}
+.topbar h1,#title {color:#f0edff!important;font-size:17px!important;letter-spacing:-.35px}
+.topbar .titles p {color:#8c96af!important}
+.content {max-width:1770px!important;padding:35px 42px 50px!important}
+.lc-engine-status{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #2a5046;border-radius:99px;background:#19312c7a;color:#b9c9c6;font-size:10px;font-weight:700;white-space:nowrap}
+.lc-engine-status:before{content:"";width:7px;height:7px;background:#4fe5a0;border-radius:50%;box-shadow:0 0 0 4px #4fe5a014}
+/* Surfaces: keep PeakCut's existing DOM hierarchy, functionality and renderers. */
+.card,.composer,.chan,.chprev,.lp,.empty,.pick-menu,.job-card,.job,.summary,.stat,.metric,.setting,.panel { background:#151a27!important; border-color:#2b3043!important; color:var(--text)!important; border-radius:15px!important; }
+.card {box-shadow:0 9px 30px #00000017}
+.card h2,.card h3,.hero h2,.card-head h2,.jt h3,.job-head h3,.set-sec h2,.title,.chprev b,.lp .tx b {color:#eeeaff!important}
+.hero {margin-bottom:7px;padding-top:35px!important}
+.hero h2 {color:#f3edff!important}
+.hero>p,.help,.sub {color:#9ba6c0!important}
+.hero .ga-bg {opacity:.34}
+.composer {box-shadow:0 15px 42px #00000033}
+.composer.compact {background:#181d2d!important}
+.composer-input input {background:transparent!important}
+.btn,.btn:not(.primary):not(.danger),label.ck {background:#252b3b!important;border:1px solid #384057!important;color:#e3e5f3!important;border-radius:10px!important;}
+.btn:hover,.chip:hover,.icon-btn:hover {background:#32394f!important;color:#fff!important}
+.btn.primary {background:linear-gradient(110deg,#8e5ef1,#6a5ade)!important;border-color:#9970ec!important;color:#fff!important;box-shadow:0 6px 20px #744ee527}
+.btn.primary:hover {background:linear-gradient(110deg,#a779ff,#8074ed)!important}
+.btn.dark {background:#44326c!important;border-color:#66529a!important;color:#f5eeff!important}
+.btn.danger {background:#422533!important;border-color:#70394f!important;color:#ff9db3!important}
+.btn.ghost {background:transparent!important;border-color:transparent!important;color:#b5bdd3!important}
+.icon-btn{color:#b4b5cc}
+input:not([type=checkbox],[type=radio],[type=file],[type=range]),select,textarea {background:#1c2232!important;color:#e6e9f5!important;border:1px solid #343b51!important;border-radius:9px!important;}
+input:focus,select:focus,textarea:focus {border-color:#9564f0!important;outline:2px solid #9564f044!important;outline-offset:0}
+label.ck {color:#d6d8ec!important}
+label.ck:has(input:checked) {background:#322544!important;border-color:#7858bb!important}
+.chip,.tabbtn,.ttabs,.utabs{color:#abb4cc}
+.chip {background:#252b3b!important;border:1px solid #323b51}
+.chip.on {background:#33244f!important;color:#e7d5ff!important;border-color:#654a93!important}
+.ttabs,.utabs {background:#1c2333!important}
+.ttabs .tabbtn:hover,.utabs .tabbtn:hover {background:#31394e!important;color:#fff!important}
+.ttabs .tabbtn.on {background:#40305d!important;color:#eddfff!important}
+.utabs .ind {background:#4b376b!important}
+.utabs .tabbtn.on {color:#e4d4ff!important}
+.pill.ok {color:#4fe5a0!important;background:#153b2e!important}
+.pill.warn {color:#c9a6ff!important;background:#3a2b50!important}
+.pill.bad {color:#ffa2b2!important;background:#41212e!important}
+.pill.brand {background:#423168!important;color:#e9d8ff!important}
+.stream {background:#141725!important;border:1px solid #33344e!important}
+.noembed {background:#0c0e17!important}
+.sstats div {background:#24283a!important}
+.sbadge.live {background:#493040!important;color:#ffb2c1!important}
+.sbadge.rec {background:#5b2c3f!important;color:#ffd6df!important}
+.sw input:checked, label.sw input:checked {background:var(--brand)!important}
+/* Places where PeakCut's original stylesheet hard-coded light colors. */
+:is(.card,.composer,.job,.chan,.chprev,.lp,.empty,.setting,.panel) :is(input,textarea,select) {background:#1d2334!important}
+:where(.card,.composer,.job,.chan,.chprev,.lp,.empty,.setting,.panel) :is(code,pre){background:#1a1d2e;color:#dfd8f7}
+dialog,.pop,.pick-menu {background:#161b29!important;color:#e9ecf7!important;border:1px solid #343a50!important;border-radius:17px!important}
+dialog::backdrop{background:#050613c4!important}
+/* The source layout remains responsive. */
+@media(max-width:900px){.content{padding:24px 23px 55px!important}.topbar{padding:13px 22px!important}}
+@media(max-width:760px){.app{grid-template-columns:minmax(0,1fr)}.side{border-right:0}main#main{height:100vh!important}.topbar{min-height:66px!important}.lc-engine-status{display:none}}
+@media(max-width:500px){.content{padding:20px 14px 40px!important}.lc-brand-copy strong{font-size:16px}}

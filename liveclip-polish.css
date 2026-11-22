@@ -1,0 +1,92 @@
+/* LiveClip AI V2 | acabamento visual para a SPA original do PeakCut.
+ * Aplicado APOS o tema LiveClip V2 anterior; apenas CSS (nenhuma API alterada).
+ * Cor das superficies inspirada no CSS fornecido pelo usuario.
+ */
+:root {
+  --brand:#9c6bff !important;
+  --brand-ink:#f4efff !important;
+  --brand-soft:#2d2345 !important;
+  --brand-deep:#c7a8ff !important;
+  --brand-line:#6d51ac !important;
+  --bg:#0b0e16 !important;
+  --muted:#1a2030 !important;
+  --text:#eef0fc !important;
+  --dim:#9da7c1 !important;
+  --faint:#7d89a4 !important;
+  --line:#292f42 !important;
+  --line-2:#353c54 !important;
+  color-scheme:dark !important;
+}
+body,main#main {color-scheme:dark !important}
+/* Os quatro cards brancos do dashboard sao .tile — nao .card. */
+#view .tiles .tile, #view .tile {
+  background:linear-gradient(155deg,#191d30,#151927) !important;
+  color:#edf0ff !important;
+  border:1px solid #303650 !important;
+  border-radius:16px !important;
+  box-shadow:0 9px 28px rgba(0,0,0,.14) !important;
+}
+#view .tile i {background:#322447 !important;color:#c5a2ff !important}
+#view .tile b {color:#f4efff !important}
+#view .tile span {color:#a7b1cd !important}
+/* Formularios, cartoes secundarios, cards de videos e telas de configuracao. */
+#view :is(.ai-home,.nstep,.tile-o,.seg,.range label,.clip,.livecard,.plan,.ob,.step .n,.setting,.appsetup .copyrow code),
+#view .composer.compact :is(.chip,.lp,.nstep .ctl button),
+#view .composer :is(.tile-o,.seg,.range label),
+#view .composer.compact .ob {
+  background:#191e2d !important;
+  color:#e9ebf8 !important;
+  border-color:#30384d !important;
+}
+#view .tile-o[aria-pressed=true],#view .seg button[aria-pressed=true],#view .plan:has(input:checked){
+  background:#34294b !important;color:#f2eaff !important;border-color:#7c5cbd !important;
+}
+#view .clip {overflow:hidden;border-radius:15px !important}
+#view .clip :is(.shot,.clip-info) {border-color:#31384e}
+#view .livecard {border:1px solid #5e3246 !important;background:linear-gradient(145deg,#221b2b,#171c2b) !important}
+#view .livecard :is(h2,h3,b) {color:#f2eeff !important}
+#view .ai-home :is(h2,h3,b), #view .plan b,#view .step b {color:#f3edff !important}
+#view .step, #view .meter {background:#1c2233 !important;color:#eff0fb !important}
+#view .step:hover {background:#292e43 !important}
+#view :is(.tile-o,.nstep,.seg) button:not(.btn) {color:#e2def2}
+#view .composer .btn.primary:disabled {background:#393049 !important;color:#a99ec1 !important;border-color:#45405c !important}
+#view .badge:not(.s-hi):not(.s-mid) {background:#272137;color:#e8dfff}
+#view .badge.s-mid {background:#453351 !important;color:#f4d8ff !important}
+/* Menus, avisos, modais e notificacoes nao podem continuar em branco. */
+body :is(dialog,.pop,.menu,.ntoast,.toast,.pick-menu,.nt,.modal,.modal-content) {
+  background:#171c2b !important;color:#e9ecf7 !important;border-color:#333c54 !important;
+}
+body .ntoast:hover,body .nt:hover {background:#242a3f !important}
+body :is(.ntoast,.nt,.pop,.menu) :is(b,strong,h3) {color:#f2edff !important}
+body .vb {background:#3a2b3a!important;color:#ffdcbe!important;border:1px solid #654959!important}
+body .chprev.bad,body .lp.bad {background:#3e2430!important;color:#ffb6c8!important}
+body :is(.ttabs .tabbtn.on .n,.utabs .tabbtn.on .n) {background:#4c3b69!important;color:#f4eaff!important}
+body :is(.composer,.card,.plan,.clip,.livecard,.ai-home,.setting,.panel,.job,.job-card) a:not(.btn) {color:#c7a5ff}
+body :is(.composer,.card,.plan,.clip,.livecard,.ai-home,.setting,.panel,.job,.job-card) a:not(.btn):hover {color:#ead8ff}
+/* Labels, entradas, tabelas, barras de progresso. */
+#view :is(input,select,textarea):not([type=checkbox],[type=radio],[type=range],[type=file]) {
+  background:#1d2333 !important;color:#eef0fc !important;border-color:#39415b !important;
+}
+#view :is(input,textarea)::placeholder{color:#8895b1!important}
+#view table th{color:#91a0bd!important;border-color:#30384c!important}
+#view table td{color:#e4e8f5!important;border-color:#292f42!important}
+#view tr:hover td {background:#1b2232!important}
+#view :is(.kpi b,.stat b,.chart .total){color:#f1ebff!important}
+#view :is(.kpi span,.stat span){color:#9faac4!important}
+#view .chart .b2 {fill:#ac8ce3!important}
+#view :is(.bar,.stor-bar){background:#292d41!important}
+#view :is(.bar i,.stor-bar i){background:#9c6bff!important}
+/* Mantem os sinais reais de gravacao e falha legiveis. */
+#view .pill.ok {color:#66efb0!important;background:#173f34!important}
+#view .pill.bad {color:#ffacbb!important;background:#472533!important}
+#view .pill.warn {color:#e9c292!important;background:#3b2e29!important}
+#view .pill.live {background:#9c294e!important;color:#fff!important}
+#view :is(.err,.bad-text) {color:#ff99b1!important}
+/* Visual coerente com a barra lateral fornecida pelo usuario. */
+.side {background:linear-gradient(180deg,#12121f,#0d0f19 65%,#0a0c15)!important}
+.side .nav-item.on {box-shadow:inset 3px 0 #ab79ff !important}
+.topbar{box-shadow:0 1px 0 #272c3e !important}
+#view .hero .composer {border:1px solid #353854!important}
+/* Responsivo: quatro cards sem sair da tela. */
+@media(max-width:1120px){#view .tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){#view .tiles{grid-template-columns:1fr!important}.content{padding:20px 16px 46px!important}}

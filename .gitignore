@@ -1,0 +1,76 @@
+# ---- never publish: settings, keys and anything users made
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*service-account*.json
+*client_secret*.json
+data/
+storage.json
+*.db
+*.db-wal
+*.db-shm
+*.sqlite*
+*.log
+
+# ---- this computer only
+.claude/
+CLAUDE.local.md
+.vscode/
+.idea/
+*.bat
+Thumbs.db
+.DS_Store
+
+# ---- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+# Ambiente Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Credenciais
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*token*
+*secret*
+
+# Dados privados
+data/
+data_usuarios_teste/
+users/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+posts.json
+
+# Arquivos temporarios
+*.log
+tmp/
+temp/
+backups/
+liveclip-brand-backups/
+liveclip_v2_backups/
+migracao-backups/
+
+# Modelos e dependencias
+models/
+node_modules/
+
+# Instaladores antigos
+LiveClipAI_Editor_Livre/
+LiveClipAI_Editor_Livre_Topo_V3/
+LiveClipAI_V2_Editor_Visual/
+payload/

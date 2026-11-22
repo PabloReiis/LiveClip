@@ -1,0 +1,40 @@
+LIVECLIP AI V2 — ACABAMENTO DO PAINEL PEAKCUT
+============================================
+
+Esta etapa corrige cards brancos, partes claras esquecidas pelo primeiro tema,
+contraste das cores e rotulos frequentes em portugues. O motor PeakCut continua
+original: nenhuma API, comando de gravacao, fila, banco, modelo de IA ou
+renderizacao de video e alterado por este pacote.
+
+PASSO 1 - Pare o servidor V2. Se alguma live estiver gravando, finalize primeiro.
+PASSO 2 - Extraia este ZIP em D:\LiveClipAI_V2_UI (por exemplo).
+PASSO 3 - No PowerShell:
+
+  cd D:\LiveClipAI_V2
+  & ".\.venv\Scripts\python.exe" "D:\LiveClipAI_V2_UI\LiveClipAI_V2_Acabamento\INSTALAR_ACABAMENTO.py" --root "D:\LiveClipAI_V2" --check
+
+Se aparecer VALIDADO, execute o mesmo comando sem --check:
+
+  & ".\.venv\Scripts\python.exe" "D:\LiveClipAI_V2_UI\LiveClipAI_V2_Acabamento\INSTALAR_ACABAMENTO.py" --root "D:\LiveClipAI_V2"
+
+PASSO 4 - Inicie normalmente:
+
+  $env:PEAKCUT_PORT = "8767"
+  $env:PEAKCUT_DATA = "D:\LiveClipAI_V2\data"
+  $env:PEAKCUT_FETCH_MODEL = "0"
+  & ".\.venv\Scripts\python.exe" -m studio.server
+
+PASSO 5 - Abra http://127.0.0.1:8767/app e aperte Ctrl+F5.
+
+DESFAZER:
+
+  & ".\.venv\Scripts\python.exe" "D:\LiveClipAI_V2_UI\LiveClipAI_V2_Acabamento\INSTALAR_ACABAMENTO.py" --root "D:\LiveClipAI_V2" --restore
+
+O instalador guarda backups em D:\LiveClipAI_V2\liveclip_v2_backups.
+
+ATENCAO:
+- E apenas uma melhoria visual. NAO inclui nova IA, editor webcam + gameplay,
+  legendas extras nem migracao do banco antigo.
+- Alguns textos dinamicos ainda podem estar em ingles. Nao forcamos traducao
+  dentro de conteudo de usuario, titulos de videos ou transcricoes.
+- Codigo original do PeakCut mantem sua licenca e creditos.

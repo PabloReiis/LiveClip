@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="170" viewBox="0 0 840 170" role="img" aria-label="LiveClip AI">
+<defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9366FF"/><stop offset="1" stop-color="#4E69DC"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A5FFF1"/><stop offset="1" stop-color="#5DD1F2"/></linearGradient></defs>
+<rect width="156" height="156" y="7" rx="37" fill="url(#a)"/>
+<rect x="31" y="43" width="95" height="82" rx="20" fill="none" stroke="#FFF" stroke-width="8"/>
+<path d="M69 64 L112 84 L69 106Z" fill="#FFF"/>
+<path d="M52 31 H101" stroke="url(#b)" stroke-width="8" stroke-linecap="round"/>
+<circle cx="121" cy="128" r="11" fill="url(#b)"/>
+<text x="184" y="111" font-family="Segoe UI,Arial,sans-serif" font-weight="750" font-size="79" letter-spacing="-3" fill="#19142E">LiveClip</text>
+<text x="506" y="111" font-family="Segoe UI,Arial,sans-serif" font-weight="750" font-size="79" letter-spacing="-3" fill="#7047DA">AI</text>
+</svg>

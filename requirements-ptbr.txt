@@ -1,0 +1,2 @@
+# Instalado separadamente para preservar o requirements original do PeakCut.
+faster-whisper>=1.1,<2

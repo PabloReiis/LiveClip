@@ -1,0 +1,34 @@
+{
+  "studio/fetch_model.py": {
+    "base_sha256": "61c12499b82bf9bf298b37187a17c4cdbd26bb31c2fe1981bbbc1cfe0e2db30d",
+    "new_sha256": "8e74fc1a7e7c86e84f1ce9f270daa13fc2f66bca8702b20e79a3811fdb9ff68d"
+  },
+  "studio/transcribe.py": {
+    "base_sha256": "98dd402b08495089f9e7ce7d2683e19c565d4f37b2270349f4e040bc1a9c289b",
+    "new_sha256": "9e4cda08921661be7fb2a84d7f19faa46093e8f9309770ed464977a40a44e667"
+  },
+  "studio/brain.py": {
+    "base_sha256": "1b45efc664e9d6d86b22c9ce68b366aed9e700d10ee52d57c7ec261cca7b4db5",
+    "new_sha256": "63e80f957a196168d353cbaf21703789c55ddb6b9f36cb89e404a69fb2f1c971"
+  },
+  "studio/jobs.py": {
+    "base_sha256": "7500564fefcdbf8fbedecf3c941e941de43dfe48c8dd2ad30265dde3b13b2473",
+    "new_sha256": "f6458ac10bb08c3108f8c72c2e2d666fdf51fc11841eb58d3f10215251af256a"
+  },
+  "studio/live.py": {
+    "base_sha256": "add26f9909708a26ace6cf3d56a684f71903b716e094a8d871e789a76b90e808",
+    "new_sha256": "854eb17190b94d614321f22f0e8c45849293646ebb151e0f7d63001773b391fc"
+  },
+  "studio/asr_worker.py": {
+    "base_sha256": "e6704ce2673c36ed810f8ed17e7659f469d65e29107d519a684ae7c674e9ba31",
+    "new_sha256": "9f6c4552ce2d575fe9298316c79e4f3177d07752d5aba009b0abd5bc0be196bc"
+  },
+  "web/index.html": {
+    "base_sha256": "4d4546967a52ec54a03510336ff0f7cd2de8ac4db3bcfee39b90097a8906c7c5",
+    "new_sha256": "bd4bedb683e4d2bcd3d0c9e4561ceed023a9c4e29337e0b3c00a88b8dfc7cca5"
+  },
+  "requirements-ptbr.txt": {
+    "base_sha256": null,
+    "new_sha256": "bf50d2356e0a07a4229fb76b6d6ea885c06d53d955322fa32a1135a25e5d18b3"
+  }
+}
